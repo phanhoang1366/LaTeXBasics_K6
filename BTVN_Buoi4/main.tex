@@ -1,0 +1,79 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage[left=2cm, right=3cm, bottom=2cm, top=2cm]{geometry}
+\usepackage[table]{xcolor}
+
+\definecolor{lightgreen}{RGB}{191, 255, 128}
+\definecolor{lightergreen}{RGB}{230, 255, 204}
+
+% working with tables
+\usepackage{array}
+
+\begin{document}
+
+%Bảng luyện tập
+%\begin{table}[h!]
+%\begin{center}
+%    \renewcommand{\arraystretch}{4}
+%    \begin{tabular}{||m{5cm}|m{5cm}|m{5cm}||}
+%    \textbf{Nhân tố sinh thái} & \textbf{Nhóm thực vật} & \textbf{Nhóm động vật} \\ \hline \hline
+%    \hline
+%    \textbf{Ánh sáng} & - Nhóm cây ưa sáng & Nhóm động vật tán sáng \\
+%    \hline
+%    \textbf{Nhiệt độ} & Thực vật biến nhiệt & Động vật biến nhiệt \\
+%    \hline
+%    \textbf{Độ ẩm} & Thực vật & Động vật \\
+%    \hline
+%    \end{tabular}
+%    \caption{Phân chia các nhóm sinh vật}
+%    \label{tab:my_label}
+%\end{center}
+%\end{table}
+
+\begin{table}[h]
+    \renewcommand{\arraystretch}{3}
+    \begin{tabular}{||m{5cm}|m{5cm}|m{5cm}||}
+    \hline
+    \textbf{Nhân tố sinh thái} & \textbf{Nhóm thực vật} & \textbf{Nhóm động vật} \\
+    \hline \hline
+    \textbf{Ánh sáng} &
+    - Nhóm cây ưa sáng \newline - Nhóm cây ưa bóng &
+    - Nhóm động vật ưa sáng \newline - Nhóm động vật ưa tối \\
+    \hline
+    \textbf{Nhiệt độ} &
+    - Thực vật biến nhiệt \newline - Thực vật hằng nhiệt &
+    - Động vật biến nhiệt \newline - Động vật hằng nhiệt \\
+    \hline
+    \textbf{Độ ẩm} &
+    - Thực vật ưa ẩm \newline - Thực vật chịu hạn &
+    - Động vật ưa ẩm \newline - Động vật ưa khô \\
+    \hline
+    \end{tabular}
+    \caption{Phân chia các nhóm sinh vật}
+\end{table}
+Bảng 1 cho ta thấy sự phân chia các nhóm sinh vật dựa vào các nhân tố sinh thái.
+
+\newpage
+{
+    \arrayrulecolor[HTML]{00cc00}
+    \setlength{\arrayrulewidth}{0.5mm}
+    \setlength{\tabcolsep}{18pt}
+    \renewcommand{\arraystretch}{2.5}
+    \rowcolors{3}{lightgreen}{lightergreen}
+    \begin{tabular}{|m{3cm}|m{3cm}|m{3cm}|}
+        \hline
+        \rowcolor[HTML]{99ff80}\multicolumn{3}{|c|}{Country List} \\
+        \hline
+        Country Name or Area Name& ISO ALPHA 2 Code &ISO ALPHA 3 \\
+        \hline
+        Afghanistan    & AF & AFG \\
+        Aland Islands  & AX & ALA \\
+        Albania        & AL & ALB \\
+        Algeria        & DZ & DZA \\
+        American Samoa & AS & ASM \\
+        Andorra        & AD & AND \\
+        Angola         & AO & AGO \\
+        \hline
+    \end{tabular}
+}
+\end{document}

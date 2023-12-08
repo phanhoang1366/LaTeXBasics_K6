@@ -1,0 +1,141 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\DeclareMathOperator{\Hamsin}{Sin}
+\usepackage{listings}
+
+\usepackage{xcolor}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{gray! 20},
+    keywordstyle=\color{red},
+    numbers=left,                    
+    numbersep=5pt,
+}
+\lstset{style=mystyle}
+
+\begin{document}
+%bài trên lớp
+\noindent
+\textbf{Bài 1 :}\\
+\begin{equation}
+    x^2+y^2+z^2=0 \tag*{I}
+\end{equation}
+\textbf{Bài 2}
+\begin{multline}
+    F=\{ F_x \in F_c:(|S|>|C|) \cap\\ (MinPixels<|S|< maxPixels)\cap\\
+    (|Sconnected|>|S|-\epsilon\}
+\end{multline}
+\textbf{Bài 3}
+\begin{align*}
+    &x=1 & x&y=2 & xyz=3 \\
+    &xy=23 & x&yz=3 & x=11 \\
+    &xyz=345 & &x=1 & xyz=22
+\end{align*}
+\textbf{Bài 4}
+\begin{align}
+    \boxed{x_1x_2x_3=\frac{-d}{a}} \tag*{[2]}\\
+    x_1x_2+x_2x_3+x_3x_1= \frac{c}{a} \tag*{[3]}
+    \intertext{Đồng thời}
+    x_1 + x_2 + x_3 = \frac{-b}{a} 
+    \tag*{[4]}
+\end{align}
+\textbf{Bài 5}
+
+\begin{align}
+    \overbrace{\overset{+}{A} + \underset{-}{B} + A^{B^{C^{2}}} + \frac{\omega}{\Phi}}^{\text{Vế trái}}= \underbrace{\underset{+}{A}+\underset{*}{B}+ 12\frac{A^B}{C}+ \frac{\Omega}{\varphi}}_{\text{Vế phải}} \tag{Pt.5} \label{Pt.5}
+\end{align}
+\newpage
+\textbf{Bài 6}
+
+\begin{equation}
+\frac{\sqrt{3} + \sqrt{2}}{\sqrt{5} - \sqrt{7}} = 
+\frac{
+    \begin{split}
+        (\sqrt{3} + \sqrt{2})(\sqrt{5} + \sqrt{7}) \\
+        (\sqrt{5} + \sqrt{7})
+    \end{split}
+}{
+    \begin{split}
+        (\sqrt{5} - \sqrt{7})(\sqrt{5} + \sqrt{7}) \\
+        (\sqrt{5} + \sqrt{7})
+    \end{split}
+}
+\end{equation}
+
+\textbf{Bài 7}
+\lstdefinestyle{mystyle}{
+    language=Python,
+    backgroundcolor=\color{cyan!10!},
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!60!black},
+    stringstyle=\color{red},
+    numberstyle=\tiny\color{gray},
+    numbers=left,
+    basicstyle=\ttfamily\small,
+    showstringspaces=false,
+    frame=single
+}
+\lstset{style = mystyle}
+\begin{lstlisting}[caption={Mã nguồn Python}, label={lst:python-code}]
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+num = 5
+result = factorial(num)
+print(f"The factorial of {num} is {result}.")
+\end{lstlisting}
+\textbf{Bài 7}
+\begin{algorithm}
+\caption{QuickSort}
+\label{alg:quicksort}
+\begin{algorithmic}[1]
+\Procedure{QuickSort}{$arr, low, high$}
+    \If{$low < high$}
+        \State $pivot \gets \Call{Partition}{arr, low, high}$
+        \State $\Call{QuickSort}{arr, low, pivot - 1}$
+        \State $\Call{QuickSort}{arr, pivot + 1, high}$
+    \EndIf
+\EndProcedure
+\Statex
+\Procedure{Partition}{$arr, low, high$}
+    \State $pivot \gets arr[high]$
+    \State $i \gets low - 1$
+    \For{$j \gets low$ \textbf{to} $high - 1$}
+        \If{$arr[j] \leq pivot$}
+            \State $i \gets i + 1$
+            \State \textbf{swap} $arr[i]$ \textbf{and} $arr[j]$
+        \EndIf
+    \EndFor
+    \State \textbf{swap} $arr[i + 1]$ \textbf{and} $arr[high]$
+    \State \textbf{return} $i + 1$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\newpage
+Now the exponent in the joint density in (4-11) can be simplified. By result 4.9(a),\\
+\begin{align*}
+    (x_j- \mu )'  \Sigma^{-1} (x_j-\mu)
+    =&\text{tr}[(x_j-\mu)'\Sigma^{-1}(x_j-\mu)]\\
+    =&\text{tr}[\Sigma^{-1}(x_j-\mu)(x_j-\mu)']
+    \tag{4-12}
+\end{align*}
+Next,
+\begin{align*}
+     \sum_{j=1}^{n}(x_j-\mu)'\Sigma^{-1}(x_j-\mu)
+ =&\sum_{j=1}^{n}\text{tr}[(x_j-\mu)'\Sigma^{-1}(x_j-\mu)]\\
+ =&\sum_{j=1}^{n}\text{tr}[\Sigma^{-1}(x_j-\mu)(x_j-\mu)']\\
+ =&\text{tr}\left[\Sigma^{-1}\left(\sum_{j=1}^{n}(x_j-\mu)(x_j-\mu)'\right)\right]
+  \tag{4-13}
+\end{align*}
+
+
+
+\end{document}

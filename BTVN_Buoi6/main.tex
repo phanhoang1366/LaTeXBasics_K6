@@ -1,0 +1,149 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{vietnam}
+\usepackage[left=2cm, right=3cm, bottom=2cm, top=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{amsfonts, amssymb, amsthm}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{algorithm, algorithmicx}
+\usepackage[noend]{algpseudocode}
+\usepackage{listings}
+
+\newcommand{\varx}{\mathbf{x}}
+\newcommand{\boldsigma}{\boldsymbol{\Sigma}}
+\newcommand{\varmu}{\boldsymbol{\mu}}
+
+\begin{document}
+\textbf{Bài 1.} 
+
+\begin{equation*}
+    x^2 + y^2 + z^2 = 0 \tag*{I}
+\end{equation*}
+
+\textbf{Bài 2.} 
+
+\begin{multline*}
+    F = \{F_x \in F_c : (|S| > |C|) \cap \\
+     (M_{inPixels} < |S| < max_{inPixels}) \cap \\
+      (|S_{connected}| > |S| - \epsilon)\} \tag*{(1)}
+\end{multline*}
+
+\textbf{Bài 3.} 
+\begin{align*}
+    x &= 1 & xy &= 2 & xyz &= 3 \\
+    xy &= 23 & xyz &= 3 & x &= 11 \\
+    xyz &= 345 & x &= 1 & xyz &= 22
+\end{align*}
+
+\textbf{Bài 4.} 
+\begin{align*}
+    \Aboxed{x_1x_2x_3 = \frac{-d}{a}} & \tag*{[2]} \\
+    x_1x_2 + x_2x_3 + x_3x_1 = \frac{c}{a} & \tag*{[3]}
+\end{align*}
+
+Đồng thời:
+
+\begin{equation*}
+    x_1 + x_2 + x_3 = \frac{-b}{a} \tag*{[4]}
+\end{equation*}
+
+\textbf{Bài 5.} 
+\begin{equation*}
+    \overbrace{\overset{+}{A}+\underset{-}{B} + {{A^B}^C}^2 + \cfrac{\omega}{\Phi}}^{\text{Vế trái}} = \underbrace{\underset{+}{A} + \underset{*}{B} + 12\cfrac{A^B}{C} + \cfrac{\Omega}{\varphi }}_{\text{Vế phải}} \tag*{(Pt.5)}
+\end{equation*}
+
+\newpage
+
+\textbf{Bài 6.}
+\begin{equation*}
+    \frac{(\sqrt{3} + \sqrt{2})}{\sqrt{5} - \sqrt{7}} = 
+    \frac{
+        \begin{split}
+            (\sqrt{3} + \sqrt{2})(\sqrt{5} + \sqrt{7}) \\
+            (\sqrt{5} + \sqrt{7})
+        \end{split}
+    }{
+        \begin{split}
+            (\sqrt{5} - \sqrt{7})(\sqrt{5} + \sqrt{7}) \\
+            (\sqrt{5} + \sqrt{7})
+        \end{split}
+    } \tag*{(2)}
+\end{equation*}
+
+\lstdefinestyle{my_style}{
+    language=Java,
+    backgroundcolor=\color{green!10!},
+    numberstyle=\tiny\color{gray},
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green},
+    numberstyle=\tiny\color{gray},
+    stringstyle=\color{red},
+    numbers=left,
+    numbersep=5pt,
+    frame=single,
+    breaklines=true,
+    breakatwhitespace=true,
+    showstringspaces=false,
+    tabsize=10,
+    captionpos=t
+}
+
+\lstset{style=my_style}
+
+\textbf{Bài 7.}
+\begin{lstlisting}[language=Python, caption={Mã nguồn Python}, label={lst:python-code}]
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+num = 5
+result = factorial(num)
+print(f"The factorial of {num} is {result}.")
+\end{lstlisting}
+
+\textbf{Bài 7.} \\
+\begin{algorithm}[H]
+    \caption{QuickSort}
+    \begin{algorithmic}[1]
+        \Procedure{QuickSort}{$arr, low, high$}
+            \If{$low < high$}
+                \State $pivot \gets \Call{Partition}{arr, low, high}$
+                \State $\Call{QuickSort}{arr, low, pivot - 1}$
+                \State $\Call{QuickSort}{arr, pivot + 1, high}$
+            \EndIf
+        \EndProcedure
+        \newline
+        \Procedure{Partition}{$arr, low, high$}
+            \State $pivot \gets arr[high]$
+            \State $i \gets low - 1$
+            \For{$j \gets low$ to $high - 1$}
+                \If{$arr[j] \leq pivot$}
+                    \State $i \gets i + 1$
+                    \State \textbf{swap} $arr[i]$ \textbf{and} $arr[j]$
+                \EndIf
+            \EndFor
+            \State \textbf{swap} $arr[i + 1]$ \textbf{and} $arr[high]$
+            \State \Return $i + 1$
+        \EndProcedure
+    \end{algorithmic}
+\end{algorithm}
+
+\newpage
+Now the exponent in the joint density in (4-11) can be simplified. By Result 4.9(a),
+
+\begin{alignat*}{2}
+    (\varx_j - \varmu)' \boldsigma^{-1} (\varx_j - \varmu) & = tr[(\varx_j - \varmu)' \boldsigma^{-1} (\varx_j - \varmu)] \\
+    & = tr[\boldsigma^{-1} (\varx_j - \varmu) (\varx_j - \varmu)'] \tag*{(4-12)} \\
+\end{alignat*}\\
+Next, 
+\begin{alignat*}{2}
+    \sum_{j = 1}^{n} (\varx_j - \varmu)' \boldsigma^{-1} (\varx_j - \varmu) & = \sum_{j=1}^{n} tr[(\varx_j - \varmu)' \boldsigma^{-1} (\varx_j - \varmu)] \\
+    & = \sum_{j=1}^{n} tr[\boldsigma^{-1} (\varx_j - \varmu) (\varx_j - \varmu)'] \\
+    & = tr \left[ \boldsigma^{-1} \left( \sum_{j=1}^{n} (\varx_j - \varmu) (\varx_j - \varmu)' \right) \right] \tag{4-13} \label{eq:4-13} \\
+\end{alignat*}
+
+\end{document}

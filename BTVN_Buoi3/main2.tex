@@ -1,0 +1,76 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[left=2cm, right=3cm, top=3cm, bottom=3cm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\LaTeX\ Basics}
+\fancyfoot[R]{Trang \thepage}
+
+\usepackage{indentfirst}
+\setlength{\baselineskip}{2pt}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{4pt}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
+
+\title{The heat is on: from the Arctic to Africa, wildlife is being hit hard by climate chaos}
+\author{- The Guardian -}
+\date{October 25, 2023}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\begin{center}
+    \begin{minipage}{0.8\textwidth}
+        \noindent
+        \textbf{Global heating affects fertility, immunity and behaviour – often with lethal results – and the problems are getting worse.}
+    \end{minipage}
+\end{center}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\linewidth]{polar_bear.jpg}
+    \caption{Polar bears have to change their behavior to survive.}
+    \label{fig:polar_bear}
+\end{figure}
+
+Sweating, headaches, fatigue, dehydration – the ways heat exhaustion affects the human body are well documented. As temperatures inch up year by year we need to change the way we live, creating cooler places that provide refuge from heat.
+
+But what about wildlife? We know mass die-offs are becoming more common as heat-waves sweep terrestrial and marine ecosystems, but incremental increases in temperature, which are much harder to study, are harming almost all populations on our planet.
+
+\newpage
+\begin{wrapfigure}{15}{0.5\textwidth}
+    \includegraphics[scale=0.25]{seabirds.jpg}
+    \caption{Thick-billed murres on Coast Island in Hudson Bay, Canada}
+    \label{fig:seabirds}
+\end{wrapfigure}
+Earlier this year, for the first time, a paper was published on the impact of heat stress in large Arctic seabirds. Normally, research on species in that corner of the world is about adaptations to the cold, but in an era of climate chaos, learning to live with heat is the new challenge.
+
+As well as undergoing physical changes, animals across the world are changing their behaviour – murres, for example, are spending more time getting into the water to cool off, leaving their eggs exposed to gulls and Arctic foxes. For parents, it’s a trade-off between keeping cool enough to avoid heat stress and protecting their young.
+
+Many birds with similar ecological niches are at risk. Endangered bank cormorants risk overheating when sitting on eggs on exposed, rocky cliffs in southern Africa, according to research published in Conservation Physiology.
+
+\begin{figure}[h]
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\linewidth]{bear.jpg}
+        \caption{Grizzly bears in Alberta, Canada}
+        \label{fig:bear}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.9\linewidth]{seabirds.jpg}
+        \caption{Thick-billed murres on Coast Island in Hudson Bay, Canada}
+        \label{fig:cormorants}
+    \end{minipage}
+\end{figure}
+\end{document}

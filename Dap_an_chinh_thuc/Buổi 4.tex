@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{array}
+\usepackage{tabu}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage[table]{xcolor}
+\usepackage{geometry}[left=1cm, right=1cm, top=3cm, bottom=3cm]
+\setlength{\arrayrulewidth}{1pt}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{3}
+
+\begin{document}
+%\textcolor{red}{2 trang đó}\\
+\begin{table}[h]
+    \centering
+    \begin{tabular}{||b{0.3\linewidth}|b{0.3\linewidth}|b{0.3\linewidth}||}
+    \hline
+    {\bf Nhân tố sinh thái} &  {\bf Nhóm thực vật} & {\bf Nhóm động vật}\\[0.2cm]
+    \hline
+    \hline\vspace{0.2cm}
+    {\bf Ánh sáng} & - Nhóm cây ưa sáng \newline - Nhóm cây ưa bóng & - Nhóm động vật ưa sáng \newline -Nhóm động vật ưa tối\\[0.2cm]
+    \hline
+    {\bf Nhiệt độ} & - Thực vật biến nhiệt \newline - Thực vật hằng nhiệt & - Động vật biến nhiệt \newline - Động vật hằng nhiệt\\[0.2cm]
+    \hline
+    {\bf Độ ẩm} & - Thực vật ưa ẩm \newline - Thực vật chịu hạn & - Động vật ưa ẩm \newline - Động vật ưa khô\\[0.2cm]
+    \hline
+    \end{tabular}
+    \caption{Phân chia các nhóm sinh vật}
+    \label{t1}
+\end{table}
+Bảng \ref{t1} cho ta thấy sự phân chia các nhóm sinh vật dựa vào các nhân tố sinh thái.
+
+
+\arrayrulecolor{green!80!black!}
+{\rowcolors{3}{green!50!yellow!50}{green!50!yellow!20}
+\begin{tabular}{ |m{0.3\textwidth}|m{0.3\textwidth}|m{0.3\textwidth}|  }
+\hline
+\rowcolor{green!80!yellow!50}\multicolumn{3}{|c|}{Country List} \\
+\hline
+Country Name or Area Name& ISO ALPHA 2 Code &ISO ALPHA 3 \\
+\hline
+Afghanistan & AF &AFG \\
+Aland Islands & AX   & ALA \\
+Albania &AL & ALB \\
+Algeria    &DZ & DZA \\
+American Samoa & AS & ASM \\
+Andorra & AD & AND   \\
+Angola & AO & AGO \\
+\hline
+\end{tabular}}
+\end{document}
